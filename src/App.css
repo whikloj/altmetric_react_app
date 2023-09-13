@@ -24,6 +24,7 @@ body {
   width: 100%;
   table-layout: auto;
 }
+
 .results thead th, .citation_result td {
   border-right: 1px solid white;
   padding: 0 .2em;
@@ -33,7 +34,14 @@ body {
   border-right: none;
 }
 
+.citation_result:nth-child(even) {
+  background-color: #3a6373;
+}
+
 .App-link {
   color: #61dafb;
 }
 
+.doi-wrapper {
+  padding: 1em;
+}
