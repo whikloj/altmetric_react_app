@@ -111,7 +111,7 @@ const SingleForm = ({ add, check, reset }) => {
       {/*<LimitForm requestLimit={requestLimit} />*/}
       <div className="doi-wrapper">
         <div className="label">DOI</div>
-        <div><input length="100" type="text" value={doi} onChange={(event) => setDoi(event.target.value)} required/></div>
+        <div><input length="100" type="text" value={doi} onChange={(event) => setDoi(event.target.value.trim())} required/></div>
       </div>
       <button type="submit">Add</button> <button onClick={() => {reset(); setDoi('')}}>Reset</button>
     </form>
