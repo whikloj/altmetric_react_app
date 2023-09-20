@@ -1,5 +1,8 @@
+import { useContext } from 'react';
+import { RecordContext } from './RecordContext';
 
-function ResultList(props) {
+export const ResultList = () => {
+  const { recordState } = useContext(RecordContext);
   return (
     <table className="results">
       <thead>
@@ -15,7 +18,7 @@ function ResultList(props) {
         </tr>
       </thead>
       <tbody>
-      { props.results.map((result, index) => (
+      { recordState.recordList.map((result, index) => (
         <tr key={index} className="citation_result" >
           <td className="title_data">{result.title}</td>
           <td>{result.doi}</td>
@@ -31,5 +34,3 @@ function ResultList(props) {
     </table>
   );
 };
-
-export default ResultList;
